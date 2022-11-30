@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: titulo-rubik;
+  src: url(../font/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: texto-poppins;
+  src: url(../font/Poppins-Regular.ttf);
+}
+
+/*# sourceMappingURL=style.css.map */
