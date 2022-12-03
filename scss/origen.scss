@@ -5,8 +5,56 @@
 @import 'mixins';
 
 
+// NAVBAR GENERAL
+.navbar{
+box-shadow: 1px 1px 4px black;
+
+    .nav-item{
+        display: flex;
+        align-items: center;
+    }
+
+    .lupa-nav {
+
+        .button-search{
+            border: none;
+            background-color: transparent;
+            font-size: 25px;
+        }
+    }
+
+    .burger-lupa{
+        width: 110px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .button-search-full{
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            font-size: 25px;
+        }
+    }
+
+}
 
 
+
+
+//FOOTER
+
+footer {
+    display: flex;
+    justify-content: center;
+    
+    .footer-wrapper{
+        text-align: center;
+        width: 80%;
+    }
+    
+}
 
 
 

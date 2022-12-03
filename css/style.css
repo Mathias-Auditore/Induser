@@ -12,5 +12,39 @@
   font-family: texto-poppins;
   src: url(../font/Poppins-Regular.ttf);
 }
+.navbar {
+  box-shadow: 1px 1px 4px black;
+}
+.navbar .nav-item {
+  display: flex;
+  align-items: center;
+}
+.navbar .lupa-nav .button-search {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+}
+.navbar .burger-lupa {
+  width: 110px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .burger-lupa .button-search-full {
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  font-size: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-wrapper {
+  text-align: center;
+  width: 80%;
+}
 
 /*# sourceMappingURL=style.css.map */
