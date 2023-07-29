@@ -63,6 +63,7 @@
   z-index: 9;
   transition: all 600ms;
 }
+
 #ctn-bars-search #inputSearch {
   display: block;
   width: 100%;
@@ -111,6 +112,148 @@
   z-index: 7;
   display: none;
 }
+
+/* ----------------- CARRUSEL ----------------- */
+.swiper-container {
+  width: 100%;
+  height: 540px;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-button-next {
+  color: red;
+}
+
+/* ----------------- COLUMNA CENTRAL ----------------- */
+.center-col {
+  display: flex;
+  padding-top: 5%;
+  margin-left: 1%;
+}
+
+.center-col div{
+  height: 165px;
+  width: 250px;
+  background-position: center;
+  border-radius: 4px;
+  margin-left: 1%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.center-col div:hover {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+.center-col div h3{
+  position: absolute;
+  bottom: -5%;
+  color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+  padding-top: 2%;
+  padding-bottom: 1.5%;
+}
+
+/* ----------------- PRESENTACION ----------------- */
+.presentacion{
+  height: 400px;
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  gap: 1%;
+}
+
+.presentacion img{
+  margin-top: 2%;
+}
+
+.presentacion h2 {
+  padding-top: 2%;
+  font-size: 46px;
+  font-weight: normal;
+}
+
+.presentacion p{
+  width: 65%;
+  text-align: justify;
+}
+
+.presentacion a{
+  text-decoration: none;
+  padding: 1%;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.presentacion a:hover {
+  background-color: grey;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ----------------- MAPA ----------------- */
+
+.map-container{
+  margin-left: 25%;
+}
+
+#map{
+  width: 500px;
+  height: 500px;
+}
+
+.custom-label-icon {
+  background-color: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+  /*border: 1px solid black;*/
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.map-button{
+  border-radius: 4px;
+  position: absolute;
+  left: 25.8%;
+  top: 213%;
+  z-index: 999;
+  width: 32.5px;
+  height: 32.5px;
+  border: 2px solid rgb(136,169,178);
+}
+
+/* ----------------- FOOTER ----------------- */
+
 
 footer {
   display: flex;
@@ -180,6 +323,41 @@ footer .footer-wrapper {
   #box-search li a:hover {
     background-color: #f3f3f3;
   }
+}
+
+@media (max-width: 768px) {
+
+  .swiper-container .swiper-wrapper .swiper-slide {
+    color: red;
+    height: 500px;
+    background-position: center;
+  }
+
+  .swiper-container {
+    height: 500px;
+  }
+  
+}
+
+@media (max-width: 425px) {
+
+  .swiper-container .swiper-wrapper .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    color: blue;
+    height: 400px;
+  }
+
+  .center-col div {
+    margin-left: 1px;
+    background-position: center;
+  }
+
+  .center-col div p{
+    border-radius: 0px;
+    font-size: 11px;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */
