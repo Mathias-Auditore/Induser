@@ -1,0 +1,44 @@
+{
+    "sedes" :[
+        {
+            "nombre": "SEDE BUENOS AIRES (Laboratorio Central)",
+            "direccion": "Castelli 1761 - Lomas de Zamora, Buenos Aires",
+            "contacto": "Tel/Fax: (54-011) 0810-222-0430"
+        },
+        {
+            "nombre": "SEDE SALTA",
+            "direccion": "San Juan 272 (4400) - Ciudad de Salta, Salta",
+            "contacto": "Tel.: (0387) 4319161"
+        },
+        {
+            "nombre": "SEDE MENDOZA",
+            "direccion": "Presidente Alvear 352 - Godoy Cruz, Mendoza (5501)",
+            "contacto": "Tel/Fax (0261) 4241 367"
+        },
+        {
+            "nombre": "SEDE SAN JUAN",
+            "direccion": "Calle Manuel Belgrano 756 (E) - Ciudad de San Juan, San Juan (5400)",
+            "contacto": "Tel/Fax: 0264-4229379/4804"
+        },
+        {
+            "nombre": "SEDE NEUQUEN",
+            "direccion": "Rufino Ortega 1010 - Ciudad de Neuquén, Neuquén (8300)",
+            "contacto": "Tel.: (0299) 4483129"
+        },
+        {
+            "nombre": "SEDE CHUBUT",
+            "direccion": "Reconquista 92 - Comodoro Rivadavia, Chubut (9000)",
+            "contacto": "Tel.: (0297) 4548287"
+        },
+        {
+            "nombre": "SEDE SANTA CRUZ",
+            "direccion": "Hermana A Damevin 1082 - Caleta Olivia, Santa Cruz (9011)",
+            "contacto": "Tel.: (0297) 6239523"
+        },
+        {
+            "nombre": "SEDE CATAMARCA",
+            "direccion": "Salta 309 - San Fernando del Valle de Catamarca, Catamarca (4700)",
+            "contacto": "Tel.: TEL:011 3007 3301"
+        }
+    ]
+}

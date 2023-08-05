@@ -20,8 +20,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=REM:wght@800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="icon" type="image/x-icon" href="/img/header/induser-logo.ico">
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-tooltip"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -93,7 +95,7 @@
 
 
   <div id="ctn-bars-search">
-    <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    <!--<input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">-->
   </div>
 
   <ul id="box-search">
@@ -116,26 +118,27 @@
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide" style="background-image: url(./assets/carousel/05-100_0149.jpeg)">
-        <h2>COBERTURA A NIVEL PAÍS</h2>
-        <p>Estamos donde se nos necesita</p>
+        <h2>COBERTURA A NIVEL PAIS</h2>
+        <p>ESTAMOS DONDE SE NOS NECESITA</p>
       </div>
       <div class="swiper-slide" style="background-image: url(./assets/carousel/01-Autoanalizador-AA3R.jpg);">
         <h2>VANGUARDIA</h2>
-        <p>Conocimiento y tecnología en constante superación</p>
+        <p>CONOCIMIENTO Y TECNOLOGÍA EN CONSTANTE SUPERACIÓN</p>
       </div>
       <div class="swiper-slide" style="background-image: url(./assets/carousel/02-ICP-MS-Nexion-Perkin-Elmer.jpeg)">
         <h2>SUPERIORIDAD</h2>
-        <p>Laboratorio argentino con más métodos y parámetros acreditados por el OAA</p>
+        <p>LABORATORIO ARGENTINO CON MÁS MÉTODOS <br>
+          Y PARÁMETROS ACREDITADOS POR EL OAA</p>
       </div>
       <div class="swiper-slide" style="background-image: url(./assets/carousel/03-01-4.jpeg)">
         <h2>DISTINCIÓN</h2>
-        <p>Laboratorio clase A
-          Resolución 41/14 OPDS
+        <p>LABORATORIO CLASE A
+          RESOLUCIÓN 41/14 OPDS
         </p>
       </div>
       <div class="swiper-slide" style="background-image: url(./assets/carousel/04-IMG_8615.jpeg)">
         <h2>TECNOLOGÍA</h2>
-        <p>Equipamiento de alta complejidad</p>
+        <p>EQUIPAMIENTO DE ALTA COMPLEJIDAD</p>
       </div>
     </div>
     <!-- Paginación -->
@@ -175,9 +178,17 @@
     <a href="https://youtu.be/bgEIQMRlQIw" target="_blank">VER VIDEO</a>
   </div>
   </div>
+  <hr>
   <div class="map-container">
-    <div id="map"></div>
-    <button class="map-button" onclick="volverALocalizacionInicial()">↩</button>
+    <h2>AREAS DE COBERTURA</h2>
+    <div class="map-content">
+      <div id="map"><button class="map-button" onclick="volverALocalizacionInicial()">↩</button></div>
+      <div id="sede">
+        <h4 id="nombreSede"></h4>
+        <p id="direccionSede"></p>
+        <p id="contactoSede"></p>
+      </div>
+    </div>
   </div>
   <footer class="py-5">
     <div class="footer-wrapper">
@@ -253,11 +264,14 @@
 <script>
 
   const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
     //direction: 'vertical',
     loop: true,
+    /*autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },*/
 
-    // If we need pagination
+    //Paginación
     /*pagination: {
       el: '.swiper-pagination',
     },*/
@@ -271,12 +285,7 @@
       prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
 
-    
   });
 </script>
 
