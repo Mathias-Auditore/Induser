@@ -185,14 +185,15 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding-left: 10.5%;
+  padding-right: 10.5%;
   padding-top: 5%;
+  padding-bottom: 5%;
   gap: 2%;
 }
 
 .center-col div{
-  height: 165px;
+  height: 200px;
   width: 250px;
   background-position: center;
   border-radius: 4px;
@@ -212,7 +213,7 @@
 
 .center-col div h3{
   position: absolute;
-  bottom: -5%;
+  bottom: -4%;
   color: rgba(0, 0, 0, 0.71);
   width: 100%;
   border-radius: 0px 0px 4px 4px;
@@ -227,7 +228,6 @@
 /* ----------------- PRESENTACION ----------------- */
 .presentacion{
   height: 400px;
-  margin-top: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
