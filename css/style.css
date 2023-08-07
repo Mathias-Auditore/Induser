@@ -183,10 +183,12 @@
 /* ----------------- COLUMNA CENTRAL ----------------- */
 .center-col {
   display: flex;
+  align-items: center;
   width: 100%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
   padding-top: 5%;
-  margin-left: 1.5%;
-  gap: 1.9%;
+  gap: 2%;
 }
 
 .center-col div{
@@ -194,16 +196,17 @@
   width: 250px;
   background-position: center;
   border-radius: 4px;
-  /*margin-left: 1%;*/
   position: relative;
   display: flex;
   justify-content: center;
   transition: transform 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  background-size: cover;
 }
 
 .center-col div:hover {
-  transform: scale(1.15);
+  transform: scale(1.12);
   z-index: 10;
 }
 
