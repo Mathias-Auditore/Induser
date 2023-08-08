@@ -331,22 +331,67 @@
 footer {
   display: flex;
   justify-content: center;
+  border-top: 2px solid #00B9BC;
+  padding-top: 50px;
 }
 footer .footer-wrapper {
   text-align: center;
-  width: 80%;
+  width: 85%;
 }
+
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .afip-qr{
+  padding-top: 40px;
+}
+
+footer .sector-logo-footer{
+  padding-top: 10px;
+}
+
+footer .frase-top{
+  padding-bottom: 10px;
+}
+
+footer .frase-bottom{
+  padding-top: 15px;
+}
+
+
+
+
+/* RESPONSIVE */
+
 
 @media (min-width: 0px) {
   .lupa-nav {
     display: none;
   }
 }
+
+
+
+
+
+
+
+
 @media (min-width: 992px) {
   .lupa-nav {
     display: block;
   }
 }
+
+
+
+
+
+
+
+
 @media (min-width: 1260px) {
   .lupa-nav {
     display: block;
@@ -396,7 +441,21 @@ footer .footer-wrapper {
   #box-search li a:hover {
     background-color: #f3f3f3;
   }
+
+  /* Footer en Monitor */
+
+  .row-footer{
+    justify-content: center;
+  }
 }
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
 
@@ -411,6 +470,14 @@ footer .footer-wrapper {
   }
   
 }
+
+
+
+
+
+
+
+
 
 @media (max-width: 425px) {
 
