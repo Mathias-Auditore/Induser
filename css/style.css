@@ -159,25 +159,25 @@
 .swiper-button-prev {
   width: 40px;
   height: 40px;
-  color: red;
   font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px 0px 0px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 
 .swiper-button-prev:hover {
   /*background-color: white;*/
   background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
-  color: black;
+  padding: 2% 0% 2% 0%;
 }
 .swiper-button-next:hover {
   background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
   border-radius: 0px 15px 15px 0px;
+  padding: 2% 0% 2% 0%;
 }
 
 /* ----------------- COLUMNA CENTRAL ----------------- */
@@ -244,7 +244,10 @@
   padding-top: 2%;
   font-size: 46px;
   font-weight: normal;
+  /*color: rgb(29,147,206);
+  text-shadow: 2px 2px 4px rgb(0,132,54);*/
 }
+
 
 .presentacion p{
   width: 65%;
@@ -269,19 +272,28 @@
 /* ----------------- MAPA ----------------- */
 
 .map-container{
-  padding-left: 18%;
+  padding-left: 12%;
+  padding-bottom: 3%;
   background-color: aliceblue;
 }
 
 .map-container h2{
   padding: 1.5% 0%;
   letter-spacing: 5px;
+  text-align: center;
 }
 
 .map-content {
   display: flex;
   align-items: center;
   gap: 5%;
+}
+
+.sede-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 580px;
 }
 
 #sede{
@@ -324,6 +336,28 @@
   border: 2px solid rgb(136,169,178);
   background-color: white;
 }
+
+/* ----------------- PERMISOS ----------------- */
+
+.permissions-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cont-1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cont-1 .permission img {
+  height: 100px;
+}
+
+.permission h4 {
+  text-align: center;
+}
+
 
 /* ----------------- FOOTER ----------------- */
 
@@ -401,24 +435,48 @@ footer .footer-wrapper {
 @media (max-width: 768px) {
 
   .swiper-container .swiper-wrapper .swiper-slide {
-    color: red;
     height: 500px;
     background-position: center;
   }
+
+  .swiper-container .swiper-wrapper .swiper-slide h2 {
+    font-size: 46px;
+  }
+
+  .swiper-container .swiper-wrapper .swiper-slide p {
+    font-size: 24px;
+  } 
 
   .swiper-container {
     height: 500px;
   }
   
+  .center-col {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .presentacion {
+    height: 420px;
+  }
+
+  .map-container .map-content .map-button {
+    left: 3.28%;
+  }
+
 }
 
 @media (max-width: 425px) {
+
+  .swiper-container {
+    height: 300px;
+  }
 
   .swiper-container .swiper-wrapper .swiper-slide {
     background-position: center;
     background-repeat: no-repeat;
     color: blue;
-    height: 400px;
+    height: 300px;
   }
 
   .center-col div {
@@ -429,6 +487,23 @@ footer .footer-wrapper {
   .center-col div p{
     border-radius: 0px;
     font-size: 11px;
+  }
+
+  .presentacion h2 {
+    font-size: 24px;
+  }
+
+  .presentacion h4 {
+    font-size: 18px;
+  }
+
+  .presentacion p{
+    font-size: 14px;
+  }
+
+  .permissions-container .img-final {
+    height: 35px;
+    width: 80%;
   }
 
 }

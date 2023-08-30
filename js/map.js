@@ -28,9 +28,11 @@ function initMap() {
     .then(response => response.json())
     .then(data => {
         const sedesData = data;
+        let imagenSede = document.getElementById('imagenSede');
         document.getElementById('nombreSede').textContent = sedesData.sedes[0].nombre;
         document.getElementById('direccionSede').textContent = sedesData.sedes[0].direccion;
         document.getElementById('contactoSede').textContent = sedesData.sedes[0].contacto;
+        imagenSede.setAttribute('src', sedesData.sedes[0].urlImagen);
         puntosMarcados.forEach((punto, index) => {
             const marker = L.marker([punto.lat, punto.lng]).addTo(map);
             marker.bindPopup(punto.nombre);
@@ -42,6 +44,7 @@ function initMap() {
                 document.getElementById('nombreSede').textContent = sedesData.sedes[index].nombre;
                 document.getElementById('direccionSede').textContent = sedesData.sedes[index].direccion;
                 document.getElementById('contactoSede').textContent = sedesData.sedes[index].contacto;
+                imagenSede.setAttribute('src', sedesData.sedes[index].urlImagen)
                 document.getElementById('sede').style.display = 'block';
             });
         });
