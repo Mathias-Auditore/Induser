@@ -1,12 +1,31 @@
 let mapaInicial;
-
-const map = L.map('map').setView([-38.6118, -65.4173], 4);
+let map;
 
 function initMap() {
 
+    const windowWidth = window.innerWidth;
+
+    let mapCenter;
+    let mapZoom;
+    if (windowWidth <= 480) {
+        // Configuración para mobile
+        mapCenter = [-36.6118, -66.4173];
+        mapZoom = 3.5;
+    } else if (windowWidth <= 768) {
+        // Configuración para tablets
+        mapCenter = [-36.6118, -64.4173];
+        mapZoom = 3.5;
+    } else {
+        // Configuración por defecto para desktop
+        mapCenter = [-38.6118, -65.4173];
+        mapZoom = 4;
+    }
+
+    map = L.map('map').setView(mapCenter, mapZoom);
+
     mapaInicial = {
-        latlng: map.getCenter(),
-        zoom: map.getZoom()
+        latlng: mapCenter,
+        zoom: mapZoom
     }
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -25,28 +44,31 @@ function initMap() {
     ];
 
     fetch('./../sedes.json')
-    .then(response => response.json())
-    .then(data => {
-        const sedesData = data;
-        document.getElementById('nombreSede').textContent = sedesData.sedes[0].nombre;
-        document.getElementById('direccionSede').textContent = sedesData.sedes[0].direccion;
-        document.getElementById('contactoSede').textContent = sedesData.sedes[0].contacto;
-        puntosMarcados.forEach((punto, index) => {
-            const marker = L.marker([punto.lat, punto.lng]).addTo(map);
-            marker.bindPopup(punto.nombre);
-            marker.on('click', function () {
-                map.flyTo([punto.lat, punto.lng], 14, {
-                    duration: 2,
-                    easeLinearity: 0.25
+        .then(response => response.json())
+        .then(data => {
+            const sedesData = data;
+            let imagenSede = document.getElementById('imagenSede');
+            document.getElementById('nombreSede').textContent = sedesData.sedes[0].nombre;
+            document.getElementById('direccionSede').textContent = sedesData.sedes[0].direccion;
+            document.getElementById('contactoSede').textContent = sedesData.sedes[0].contacto;
+            imagenSede.setAttribute('src', sedesData.sedes[0].urlImagen);
+            puntosMarcados.forEach((punto, index) => {
+                const marker = L.marker([punto.lat, punto.lng]).addTo(map);
+                marker.bindPopup(punto.nombre);
+                marker.on('click', function () {
+                    map.flyTo([punto.lat, punto.lng], 14, {
+                        duration: 2,
+                        easeLinearity: 0.25
+                    });
+                    document.getElementById('nombreSede').textContent = sedesData.sedes[index].nombre;
+                    document.getElementById('direccionSede').textContent = sedesData.sedes[index].direccion;
+                    document.getElementById('contactoSede').textContent = sedesData.sedes[index].contacto;
+                    imagenSede.setAttribute('src', sedesData.sedes[index].urlImagen)
+                    document.getElementById('sede').style.display = 'block';
                 });
-                document.getElementById('nombreSede').textContent = sedesData.sedes[index].nombre;
-                document.getElementById('direccionSede').textContent = sedesData.sedes[index].direccion;
-                document.getElementById('contactoSede').textContent = sedesData.sedes[index].contacto;
-                document.getElementById('sede').style.display = 'block';
             });
-        });
-    })
-    .catch(error => console.error("Error al cargar el archivo JSON: ", error));
+        })
+        .catch(error => console.error("Error al cargar el archivo JSON: ", error));
 
     const islasMalvinasIcon = L.divIcon({
         className: 'custom-label-icon',
@@ -60,10 +82,9 @@ function initMap() {
 
 
 }
-
 function volverALocalizacionInicial() {
     map.flyTo(mapaInicial.latlng, mapaInicial.zoom, {
-        duration: 2, 
+        duration: 2,
         easeLinearity: 0.25
     });
 }

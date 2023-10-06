@@ -3,42 +3,50 @@
         {
             "nombre": "SEDE BUENOS AIRES (Laboratorio Central)",
             "direccion": "Castelli 1761 - Lomas de Zamora, Buenos Aires",
-            "contacto": "Tel/Fax: (54-011) 0810-222-0430"
+            "contacto": "Tel/Fax: (54-011) 0810-222-0430",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE SALTA",
             "direccion": "San Juan 272 (4400) - Ciudad de Salta, Salta",
-            "contacto": "Tel.: (0387) 4319161"
+            "contacto": "Tel.: (0387) 4319161",
+            "urlImagen": "./assets/FOTO INTERIOR DE SEDE.jpg"
         },
         {
             "nombre": "SEDE MENDOZA",
             "direccion": "Presidente Alvear 352 - Godoy Cruz, Mendoza (5501)",
-            "contacto": "Tel/Fax (0261) 4241 367"
+            "contacto": "Tel/Fax (0261) 4241 367",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE SAN JUAN",
             "direccion": "Calle Manuel Belgrano 756 (E) - Ciudad de San Juan, San Juan (5400)",
-            "contacto": "Tel/Fax: 0264-4229379/4804"
+            "contacto": "Tel/Fax: 0264-4229379/4804",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE NEUQUEN",
             "direccion": "Rufino Ortega 1010 - Ciudad de Neuquén, Neuquén (8300)",
-            "contacto": "Tel.: (0299) 4483129"
+            "contacto": "Tel.: (0299) 4483129",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE CHUBUT",
             "direccion": "Reconquista 92 - Comodoro Rivadavia, Chubut (9000)",
-            "contacto": "Tel.: (0297) 4548287"
+            "contacto": "Tel.: (0297) 4548287",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE SANTA CRUZ",
             "direccion": "Hermana A Damevin 1082 - Caleta Olivia, Santa Cruz (9011)",
-            "contacto": "Tel.: (0297) 6239523"
+            "contacto": "Tel.: (0297) 6239523",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         },
         {
             "nombre": "SEDE CATAMARCA",
             "direccion": "Salta 309 - San Fernando del Valle de Catamarca, Catamarca (4700)",
-            "contacto": "Tel.: TEL:011 3007 3301"
+            "contacto": "Tel.: TEL:011 3007 3301",
+            "urlImagen": "./assets/FOTO FRENTE DE SEDE.jpg"
         }
     ]
 }
